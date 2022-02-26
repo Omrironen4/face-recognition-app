@@ -1,0 +1,22 @@
+.tilty {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transform: perspective(1000000px);
+    background: linear-gradient(0.25turn, #095696, #ebf8e1, #f69d3c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30%;
+  }
+  
+  .inner {
+    display: inline-block;
+    transform: translateZ(60px);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: .7rem;
+    color: white;
+    letter-spacing: 0.15rem;
+  }
