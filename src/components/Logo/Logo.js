@@ -6,7 +6,7 @@ import brain from './brain.png'
 
 const Logo = () => {
     return (
-        <div className='logo'>
+        <div>
             <Tilty className="tilty">
                 <div className="inner"><img alt='brain' src={brain}/></div>
             </Tilty>

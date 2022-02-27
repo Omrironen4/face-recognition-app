@@ -2,16 +2,13 @@ import React from 'react';
 import Navigation from './components/Navigation/Navigation';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm'
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <>
-        <Navigation />
-      </>
+    <div>
+      <Navigation />
       <ImageLinkForm />
-      {/* {
-      <FaceRecognition />} */}
     </div>
   );
 }
