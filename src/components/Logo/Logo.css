@@ -1,22 +1,17 @@
+  /*  */
 .tilty {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    transform-style: preserve-3d;
-    transform: perspective(1000000px);
+    width: 5rem;
+    height: 5rem; 
+    transform-style: preserve-3d;   /* 3D effect */
+    perspective: 1000;   /* square movement */
     background: linear-gradient(0.25turn, #095696, #ebf8e1, #f69d3c);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30%;
+    display: flex;    /* allows us to use justify content and align items */
+    justify-content: center; /* centers brain horizontally */
+    align-items: center; /* centers brain vertically */
+    border-radius: 20%;  
+
   }
   
   .inner {
-    display: inline-block;
-    transform: translateZ(60px);
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: .7rem;
-    color: white;
-    letter-spacing: 0.15rem;
+    transform: translateZ(30px);  /* brain movement z index */
   }
