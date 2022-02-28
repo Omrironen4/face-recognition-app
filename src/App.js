@@ -101,6 +101,11 @@ class App extends Component {
   onInputChange = (event) => {
     console.log(event.target.value)
   }
+
+  onButtonSubmit = () => {
+    console.log('click');
+  }
+
   render() {
     return (
         <div>
@@ -111,7 +116,9 @@ class App extends Component {
             options={particlesOptions}
           />
           <Navigation />
-          <ImageLinkForm onInputChange={this.onInputChange}/>
+          <ImageLinkForm 
+            onInputChange={this.onInputChange}
+            onButtonSubmit={this.onButtonSubmit}/>
           <Rank />
         </div >
     )
