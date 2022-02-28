@@ -21,7 +21,7 @@ const theme = createTheme({
 export default function ImageLinkForm() {
     return (
         <div style={{ display: 'flex-wrap', padding: '10%' }}>
-            <p style={{color: 'black', fontSize:'2vh'}}>
+            <p style={{color: 'black', fontSize:'1.5rem'}}>
                 {'This magic brain will detect faces in your pictures. Give it a try!'}
             </p>
             <ThemeProvider theme={theme}>
