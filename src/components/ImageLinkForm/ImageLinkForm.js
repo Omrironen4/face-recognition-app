@@ -21,11 +21,12 @@ const theme = createTheme({
 export default function ImageLinkForm() {
     return (
         <div style={{ display: 'flex-wrap', padding: '10%' }}>
-            <h3>
+            <p style={{color: 'black', fontSize:'2vh'}}>
                 {'This magic brain will detect faces in your pictures. Give it a try!'}
-            </h3>
+            </p>
             <ThemeProvider theme={theme}>
-                <Input sx={{ width: '70vw', paddingRight: '6%', paddingBottom: '1%' }} color='primary' id="standard-basic" label="Insert Photo URL" variant="standard" type='text' />
+                <Input sx={{ width: '70vw', paddingRight: '6%', paddingBottom: '1%' }} color='primary' select='primary'
+                  id="standard-basic" label="Insert Photo URL" variant="standard" type='text' />
             </ThemeProvider>
             <Button variant="contained" className='grow'>Detect</Button>
         </div>

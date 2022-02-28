@@ -8,7 +8,7 @@ import Logo from '../Logo/Logo'
 const Navigation = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" sx={{background: 'none'}}>
+            <AppBar position="static" sx={{background: 'none', padding:'1%'}}>
                 <Toolbar sx={{justifyContent:'space-between'}}>
                     <Logo />
                     <Button color="inherit">Login</Button>
