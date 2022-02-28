@@ -18,7 +18,7 @@ const theme = createTheme({
     }
 })
 
-export default function ImageLinkForm() {
+export default function ImageLinkForm({ onInputChange }) {
     return (
         <div style={{ display: 'flex-wrap', padding: '10%' }}>
             <p style={{color: 'black', fontSize:'1.5rem'}}>
@@ -26,7 +26,7 @@ export default function ImageLinkForm() {
             </p>
             <ThemeProvider theme={theme}>
                 <Input sx={{ width: '70vw', paddingRight: '6%', paddingBottom: '1%' }} color='primary' select='primary'
-                  id="standard-basic" label="Insert Photo URL" variant="standard" type='text' />
+                  id="standard-basic" label="Insert Photo URL" variant="standard" type='text' onChange={onInputChange} />
             </ThemeProvider>
             <Button variant="contained" className='grow'>Detect</Button>
         </div>

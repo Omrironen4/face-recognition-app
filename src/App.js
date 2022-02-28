@@ -10,7 +10,6 @@ import './App.css';
 
 
 const particlesOptions = {
-
   background: {
     color: {
       value: "none",
@@ -92,7 +91,16 @@ const particlesOptions = {
 
 
 class App extends Component {
-  
+  constructor() {
+    super();
+    this.state = {
+      input: '',
+    }
+  }
+
+  onInputChange = (event) => {
+    console.log(event.target.value)
+  }
   render() {
     return (
         <div>
@@ -103,7 +111,7 @@ class App extends Component {
             options={particlesOptions}
           />
           <Navigation />
-          <ImageLinkForm />
+          <ImageLinkForm onInputChange={this.onInputChange}/>
           <Rank />
         </div >
     )
