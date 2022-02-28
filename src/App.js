@@ -1,14 +1,15 @@
 import React from 'react';
-import Navigation from './components/Navigation/Navigation';
-import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm'
+import { Navigation } from './components/Navigation/';
+import { ImageLinkForm } from './components/ImageLinkForm/'
+import { Rank } from './components/Rank/'
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div>
       <Navigation />
       <ImageLinkForm />
+      <Rank />
     </div>
   );
 }

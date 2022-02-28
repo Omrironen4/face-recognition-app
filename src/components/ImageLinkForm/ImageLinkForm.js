@@ -25,9 +25,9 @@ export default function ImageLinkForm() {
                 {'This magic brain will detect faces in your pictures. Give it a try!'}
             </h3>
             <ThemeProvider theme={theme}>
-                <Input sx={{ width: '70vw', paddingRight: '6%', paddingBottom: '1%' }} color='primary' id="standard-basic" label="Insert Photo URL" variant="standard" />
+                <Input sx={{ width: '70vw', paddingRight: '6%', paddingBottom: '1%' }} color='primary' id="standard-basic" label="Insert Photo URL" variant="standard" type='text' />
             </ThemeProvider>
-            <Button variant="contained" sx={{justifyContent:'center'}}>Detect</Button>
+            <Button variant="contained" className='grow'>Detect</Button>
         </div>
     );
 }
