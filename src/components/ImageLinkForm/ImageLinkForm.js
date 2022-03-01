@@ -28,7 +28,7 @@ export default function ImageLinkForm({ onInputChange, onButtonSubmit }) {
                 <Input sx={{ width: '70vw', paddingRight: '6%', paddingBottom: '1%' }} color='primary' select='primary'
                   id="standard-basic" label="Insert Photo URL" variant="standard" type='text' onChange={onInputChange} />
             </ThemeProvider>
-            <Button variant="contained" className='grow' onClick={onButtonSubmit}>Detect</Button>
+            <Button variant="outlined" color='inherit' className='grow' onClick={onButtonSubmit}>Detect</Button>
         </div>
     );
 }
