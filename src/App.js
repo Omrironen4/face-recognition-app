@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navigation from './components/Navigation/Navigation';
+import FaceRecognition from './components/FaceRecognition/FaceRecognition'
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import Particles from 'react-tsparticles';
@@ -120,6 +121,7 @@ class App extends Component {
             onInputChange={this.onInputChange}
             onButtonSubmit={this.onButtonSubmit}/>
           <Rank />
+          <FaceRecognition />
         </div >
     )
   }

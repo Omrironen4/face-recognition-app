@@ -7,7 +7,7 @@ import Logo from '../Logo/Logo'
 
 const Navigation = () => {
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box>
             <AppBar position="static" sx={{background: 'none', padding:'1%'}}>
                 <Toolbar sx={{justifyContent:'space-between'}}>
                     <Logo />

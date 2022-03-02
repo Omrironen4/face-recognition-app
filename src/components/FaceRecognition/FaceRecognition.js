@@ -1,0 +1,13 @@
+import * as React from 'react';
+import Box from '@mui/material/Box';
+
+
+const FaceRecognition = () => {
+    return (
+        <Box className='center'>
+            <img alt='tree' src={'https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg'}/>
+        </Box>
+    );
+}
+
+export default FaceRecognition;
