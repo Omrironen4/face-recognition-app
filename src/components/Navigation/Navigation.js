@@ -26,7 +26,7 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
                 <AppBar position="static" sx={{ background: 'none', padding: '1%' }}>
                     <Toolbar sx={{ justifyContent: 'space-between' }}>
                         <Logo />
-                        <Button onClick={() => onRouteChange('signout')} color="primary">Sign Out</Button>
+                        <Button onClick={() => onRouteChange('signin')} color="primary">Sign Out</Button>
                     </Toolbar>
                 </AppBar>
             </Box>
