@@ -98,6 +98,9 @@ class App extends Component {
     super();
     this.state = {
       input: '',
+      imageUrl: '',
+      box: {},
+      route: 'signin'
     }
   }
 
@@ -109,23 +112,32 @@ class App extends Component {
     console.log('click');
   }
 
+  onRouteChange = () => {
+    this.setState({route: 'home'});
+
+  }
+
   render() {
     return (
-        <div>
-          <Particles className='particles'
-            id="tsparticles"
-            // init={particlesInit}
-            // loaded={particlesLoaded}
-            options={particlesOptions}
-          />
-          <Navigation />
-          <Signin />
-          <ImageLinkForm 
-            onInputChange={this.onInputChange}
-            onButtonSubmit={this.onButtonSubmit}/>
-          <Rank />
-          <FaceRecognition />
-        </div >
+      <div>
+        <Particles className='particles'
+          id="tsparticles"
+          // init={particlesInit}
+          // loaded={particlesLoaded}
+          options={particlesOptions}
+        />
+        <Navigation />
+          { this.state.route === 'signin'
+           ? <Signin onRouteChange={this.onRouteChange}/>
+           : <div> 
+              <ImageLinkForm 
+              onInputChange={this.onInputChange}
+              onButtonSubmit={this.onButtonSubmit} />
+              <Rank />
+              <FaceRecognition />
+            </div>
+          }
+      </div >
     )
   }
 }
