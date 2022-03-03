@@ -125,6 +125,7 @@ class App extends Component {
   }
 
   render() {
+    const {isSignedIn} = this.state;
     return (
       <div>
         <Particles className='particles'
@@ -133,7 +134,7 @@ class App extends Component {
           // loaded={particlesLoaded}
           options={particlesOptions}
         />
-        <Navigation isSignedIn={this.setState.isSignedIn} onRouteChange={this.onRouteChange} />
+        <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
           { this.state.route === 'home'
            ? <div> 
               <ImageLinkForm 
