@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import Navigation from './components/Navigation/Navigation';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition'
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
+import Signin from './components/Signin/Signin'
 import Rank from './components/Rank/Rank';
 import Particles from 'react-tsparticles';
 import './App.css';
+
 
 
 
@@ -117,6 +119,7 @@ class App extends Component {
             options={particlesOptions}
           />
           <Navigation />
+          <Signin />
           <ImageLinkForm 
             onInputChange={this.onInputChange}
             onButtonSubmit={this.onButtonSubmit}/>
