@@ -5,13 +5,13 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import Logo from '../Logo/Logo'
 
-const Navigation = () => {
+const Navigation = ({ onRouteChange }) => {
     return (
         <Box>
             <AppBar position="static" sx={{background: 'none', padding:'1%'}}>
                 <Toolbar sx={{justifyContent:'space-between'}}>
                     <Logo />
-                    <Button color="inherit">Login</Button>
+                    <Button onClick={() => onRouteChange('signin')} color="inherit">Sign Out</Button>
                 </Toolbar>
             </AppBar>
         </Box>

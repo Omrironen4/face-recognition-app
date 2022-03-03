@@ -112,8 +112,8 @@ class App extends Component {
     console.log('click');
   }
 
-  onRouteChange = () => {
-    this.setState({route: 'home'});
+  onRouteChange = (route) => {
+    this.setState({route: route});
 
   }
 
@@ -126,7 +126,7 @@ class App extends Component {
           // loaded={particlesLoaded}
           options={particlesOptions}
         />
-        <Navigation />
+        <Navigation onRouteChange={this.onRouteChange} />
           { this.state.route === 'signin'
            ? <Signin onRouteChange={this.onRouteChange}/>
            : <div> 
