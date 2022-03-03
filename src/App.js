@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Navigation from './components/Navigation/Navigation';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition'
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
-import Signin from './components/Signin/Signin'
+import Signin from './components/Signin/Signin';
+import Register from './components/Register/Register';
 import Rank from './components/Rank/Rank';
 import Particles from 'react-tsparticles';
 import './App.css';
@@ -127,15 +128,21 @@ class App extends Component {
           options={particlesOptions}
         />
         <Navigation onRouteChange={this.onRouteChange} />
-          { this.state.route === 'signin'
-           ? <Signin onRouteChange={this.onRouteChange}/>
-           : <div> 
+          { this.state.route === 'home'
+           ? <div> 
               <ImageLinkForm 
               onInputChange={this.onInputChange}
               onButtonSubmit={this.onButtonSubmit} />
               <Rank />
               <FaceRecognition />
-            </div>
+           </div>
+           : (
+             this.state.route === 'signin'
+            ? <Signin onRouteChange={this.onRouteChange}/>
+            : <Register onRouteChange={this.onRouteChange} />
+           )
+           
+           
           }
       </div >
     )
