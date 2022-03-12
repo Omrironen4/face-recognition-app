@@ -106,6 +106,12 @@ class App extends Component {
     }
   }
 
+  componentDidMount() {
+    fetch('http://localhost:3000')
+    .then(response => response.json())
+    .then(console.log)
+  }
+
   onInputChange = (event) => {
     console.log(event.target.value)
   }
