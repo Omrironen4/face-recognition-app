@@ -1,3 +1,4 @@
+import { ThirtyFpsSelect } from '@mui/icons-material';
 import * as React from 'react';
 import './Signin.css';
 
@@ -21,8 +22,20 @@ class Signin extends React.Component {
 
 
     onSubmitSignin = () => {
-        console.log(this.state);
-        this.props.onRouteChange('home');
+        fetch('http://localhost:3000/signin', {
+            method: 'post',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                email: this.state.signInEmail,
+                password: this.state.signInPassword
+            })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data === 'success') {
+                    this.props.onRouteChange('home');
+                }
+            })
     }
 
     render() {
@@ -45,11 +58,11 @@ class Signin extends React.Component {
                                 </div>
                                 <div className="mv3">
                                     <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
-                                    <input className="b pa2 input-reset ba bg-transparent hover-bg-blue hover-black w-100" 
-                                    type="password" 
-                                    name="password" 
-                                    id="password"
-                                    onChange={this.onPasswordChange} 
+                                    <input className="b pa2 input-reset ba bg-transparent hover-bg-blue hover-black w-100"
+                                        type="password"
+                                        name="password"
+                                        id="password"
+                                        onChange={this.onPasswordChange}
                                     />
                                 </div>
 
